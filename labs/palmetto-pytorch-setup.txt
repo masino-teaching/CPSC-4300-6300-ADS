@@ -1,0 +1,16 @@
+### pytorch with SpaCy and pytorch Geometric Spring 2025
+# Commands to create conda environment
+conda create --name cpsc4300torch python=3.12
+source activate cpsc4300torch
+conda install jupyter
+python -m ipykernel install --user --name cpsc4300torch --display-name 4300-pytorch
+
+# commands to install the required packages
+# some of these may take a few minutes on palmetto 
+pip install -U pip setuptools wheel
+pip install -U spacy
+python -m spacy download en_core_web_sm
+pip3 install torch torchvision torchaudio lightning torchmetrics ipython ipykernel matplotlib seaborn scikit-learn
+pip3 install torch_geometric
+pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.6.0+cpu.html
+pip install huggingface_hub
